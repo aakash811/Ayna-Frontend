@@ -140,17 +140,24 @@ const Signup = () => {
 
   {/* Right Section: Image */}
   <div
-    className="hidden flex-col justify-center overflow-hidden bg-cover bg-center md:flex md:w-1/2"
+    className="hidden flex-col justify-center items-center overflow-hidden bg-cover bg-center md:flex md:w-1/2"
     style={{
       backgroundImage:
         "url(https://img.freepik.com/free-vector/gray-neural-network-illustration_53876-78764.jpg?size=626&ext=jpg)",
+      height: "100vh", // Full height for the image side
     }}
   >
-    <img
-      className="translate-x-[27%] rounded-[36px] shadow-[0_24px_88px_rgba(0,0,0,0.55)]"
-      src={backimage}
-      alt="background image"
-    />
+    <div className="w-full max-w-[700px]">
+      <img
+        className="rounded-[36px] shadow-[0_24px_88px_rgba(0,0,0,0.55)] transform transition-transform duration-300 hover:scale-105"
+        src={backimage}
+        alt="background image"
+      />
+    </div>
+    <div className="absolute bottom-10 text-center text-white">
+      <h1 className="text-3xl font-bold">Welcome to Chat Application</h1>
+      <p className="mt-2 text-lg">Please Sign up to continue</p>
+    </div>
   </div>
 </div>
 
